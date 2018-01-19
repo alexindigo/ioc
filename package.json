@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "1.0.2",
   "name": "ioc",
   "description": "IoC library for React, with support for NextJS",
   "author": "Alex Indigo <iam@alexindigo.com>",

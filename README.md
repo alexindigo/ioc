@@ -110,7 +110,7 @@ describe('With Snapshot Testing', () => {
 });
 ```
 
-For more details check out [__tests__](tests).
+For more details check out [tests](__tests__).
 
 ## License
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`With Snapshot Testing Blog renders components 1`] = `
+exports[`With Snapshot Testing Component renders with props 1`] = `
 <div
   style={
     Object {

@@ -1,6 +1,8 @@
-# ioc
+# ioc [![NPM Module](https://img.shields.io/npm/v/ioc.svg)](https://www.npmjs.com/package/ioc)
 
 IoC library for React, with support for NextJS
+
+[![Build](https://img.shields.io/travis/alexindigo/ioc/master.svg)](https://travis-ci.org/alexindigo/ioc)
 
 *Notice of change of ownership: Starting version 1.0.0 this package has changed it's owner and goals. Previous version (0.1.0) is still available on npm via `npm install ioc@0.1.0`. Thank you.*
 
@@ -68,9 +70,48 @@ export default class extends React.Component {
     return (
       <div>
         Showing stuff:
-        <SharedComponent1 some={} props={} />
+        <SharedComponent1 some={} props={}>
+         <a>Link Text</a>
+        </SharedComponent1>
       </div>
     );
   }
 }
 ```
+
+## Testing
+
+Individual component testing is pretty simple, just provide your dependencies as `props`
+and add `.dive()` step to your shallow render, as with any High Order Component.
+
+```js
+import { shallow } from 'enzyme';
+import React from 'react';
+import renderer from 'react-test-renderer';
+
+import Component from './components/Component';
+
+describe('With Enzyme', () => {
+  it('Component renders with props', () => {
+    // no need to SharedComponent1 Link component much for shallow rendering
+    const injected = shallow(<Component SharedComponent1={() => {}} />);
+    const component = injected.dive();
+    expect(component.find('h1').text()).toEqual('My Component');
+    expect(component.find('SharedComponent1').find('a').text()).toEqual('Link Text');
+  });
+});
+
+describe('With Snapshot Testing', () => {
+  it('Component renders with props', () => {
+    const component = renderer.create(<Component SharedComponent1={(props) => <div comment="mocked SharedComponent1 component">{props.children}</div>} />);
+    const tree = component.toJSON();
+    expect(tree).toMatchSnapshot();
+  });
+});
+```
+
+For more details check out [__tests__](tests).
+
+## License
+
+IoC is released under the [MIT](License) license.

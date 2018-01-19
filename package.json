@@ -7,10 +7,12 @@
   "main": "./dist/index.js",
   "module": "src/index.js",
   "scripts": {
+    "pretest": "npm run build",
     "test": "NODE_ENV=test jest",
     "prebuild": "rimraf dist",
     "build": "babel src -d dist",
-    "lint": "eslint src"
+    "lint": "eslint src",
+    "prepublish": "in-publish && npm run build || not-in-publish"
   },
   "pre-commit": [
     "lint",
@@ -33,6 +35,7 @@
     "eslint-plugin-import": "2",
     "eslint-plugin-jsx-a11y": "4",
     "eslint-plugin-react": "6",
+    "in-publish": "^2.0.0",
     "install-peers": "^1.0.2",
     "jest": "^22.1.4",
     "pre-commit": "^1.2.2",

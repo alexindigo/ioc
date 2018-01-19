@@ -1,0 +1,22 @@
+{
+  "env": {
+    "development": {
+      "presets": [ "env", "react" ],
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-object-rest-spread",
+        "transform-class-properties",
+        "transform-runtime"
+      ]
+    },
+    "test": {
+      "presets": [ "env", "react" ],
+      "plugins": [
+        "transform-decorators-legacy",
+        "transform-object-rest-spread",
+        "transform-class-properties",
+        "transform-runtime"
+      ]
+    }
+  }
+}

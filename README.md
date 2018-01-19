@@ -1,5 +1,8 @@
 # ioc
+
 IoC library for React, with support for NextJS
+
+*Notice of change of ownership: Starting version 1.0.0 this package has changed it's owner and goals. Previous version (0.1.0) is still available on npm via `npm install ioc@0.1.0`. Thank you.*
 
 ## Install
 

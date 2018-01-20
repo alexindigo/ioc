@@ -1,11 +1,10 @@
 {
-  "version": "1.0.2",
+  "version": "1.0.3",
   "name": "ioc",
   "description": "IoC library for React, with support for NextJS",
   "author": "Alex Indigo <iam@alexindigo.com>",
   "license": "MIT",
   "main": "dist/index.js",
-  "module": "src/index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/alexindigo/ioc.git"

@@ -1,4 +1,5 @@
 # ioc [![NPM Module](https://img.shields.io/npm/v/ioc.svg)](https://www.npmjs.com/package/ioc)
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Falexindigo%2Fioc.svg?type=shield)](https://app.fossa.io/projects/git%2Bgithub.com%2Falexindigo%2Fioc?ref=badge_shield)
 
 IoC library for React, with support for NextJS
 
@@ -115,3 +116,6 @@ For more details check out [tests](__tests__).
 ## License
 
 IoC is released under the [MIT](License) license.
+
+
+[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Falexindigo%2Fioc.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Falexindigo%2Fioc?ref=badge_large)

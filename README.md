@@ -79,6 +79,10 @@ export default class extends React.Component {
 }
 ```
 
+### Next.js
+
+[Next.js](https://npmjs.org/next) example could be found in [their examples repository](https://github.com/zeit/next.js/tree/canary/examples/with-ioc).
+
 ## Testing
 
 Individual component testing is pretty simple, just provide your dependencies as `props`

@@ -32,8 +32,9 @@ export default function provide(injectables) {
       }
 
       render() {
+        const propsWithInjectables = { ...injectableValues, ...this.props };
         return (
-          <Component {...this.props} />
+          <Component {...propsWithInjectables} />
         );
       }
     }

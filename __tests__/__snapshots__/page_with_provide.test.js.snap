@@ -5,6 +5,14 @@ exports[`With Snapshot Testing Blog renders components 1`] = `
   <h1>
     App
   </h1>
+  Tracking also available as props on the provider component.
+  <div>
+    Children elements wrapped with 
+    injected
+    <a>
+      App: with injected
+    </a>
+  </div>
   <div
     style={
       Object {

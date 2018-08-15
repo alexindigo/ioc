@@ -49,7 +49,9 @@ exports[`With Snapshot Testing Blog renders components 1`] = `
         }
       >
         <h3>
-          Endpoint
+          Endpoint (
+          A
+          )
         </h3>
         Uses injected \`Log\` component without direct dependency on one
         <br />

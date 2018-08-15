@@ -6,7 +6,10 @@ import Component1 from './Component1';
 
 @provide({
   @types.func.isRequired
-  Tracking: TrackingProvided
+  Tracking: TrackingProvided,
+
+  @types.oneOf([ 'A', 'B' ])
+  AB: 'A'
 })
 export default class extends React.Component {
   render() {

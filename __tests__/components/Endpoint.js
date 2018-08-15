@@ -6,8 +6,8 @@ import React from 'react';
 import { inject, PropTypes } from '../..';
 
 @inject({
-  // keep it `isRequired`-free to allow mock injection via props
-  Tracking: PropTypes.func
+  Tracking: PropTypes.func, // keep it `isRequired`-free to allow mock injection via props
+  AB: PropTypes.oneOf([ 'A', 'B' ])
 })
 export default class extends React.Component {
   static propTypes = {
@@ -16,11 +16,11 @@ export default class extends React.Component {
   }
 
   render() {
-    const { Tracking } = this.props;
+    const { AB, Tracking } = this.props;
 
     return (
       <div style={{ marginTop: '5px', border: '1px dashed #00ff00', padding: '10px' }}>
-        <h3>Endpoint</h3>
+        <h3>Endpoint ({AB})</h3>
         Uses injected `Log` component without direct dependency on one
         <br />
         <Tracking params={{ foo: 'baz' }}><a>About: foo baz</a></Tracking>

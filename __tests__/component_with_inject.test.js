@@ -20,16 +20,16 @@ import Component from './components/Endpoint';
 describe('With Enzyme', () => {
   it('Component renders with props', () => {
     // no need to mock Tracking component much for shallow rendering
-    const injected = shallow(<Component Tracking={() => {}} />);
+    const injected = shallow(<Component AB={'B'} Tracking={() => {}} />);
     const component = injected.dive();
-    expect(component.find('h3').text()).toEqual('Endpoint');
+    expect(component.find('h3').text()).toEqual('Endpoint (B)');
     expect(component.find('Tracking').first().find('a').text()).toEqual('About: foo baz');
   });
 });
 
 describe('With Snapshot Testing', () => {
   it('Component renders with props', () => {
-    const component = renderer.create(<Component Tracking={(props) => <div comment="mocked Tracking component">{props.children}</div>} />);
+    const component = renderer.create(<Component AB={'B'} Tracking={(props) => <div comment="mocked Tracking component">{props.children}</div>} />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();
   });

@@ -34,11 +34,9 @@ function typedObjectFactory(typeValidator) {
 
 // augment types with PropTypes values
 Object.keys(PropTypes).forEach((key) => {
-
-  const validator = PropTypes[key];
-
   // only expose actual types and combined types
-  if (typeof validator === 'function' && validator.name.match(/^(bound |create)/)) {
+  // exclude helper properties
+  if ([ 'checkPropTypes', 'PropTypes' ].indexOf(key) === -1) {
     types[key] = typedObjectFactory(PropTypes[key]);
 
     // add isRequired
